@@ -11,7 +11,7 @@ public class Wolf extends Animal {
     public static final String NAME = "Wolf";
     public static final Color COLOR = Color.GRAY;
 
-    public Wolf(World world, int x, int y) {
+    public Wolf(final World world, final int x, final int y) {
         super(world, x, y, 9, 5);
     }
 

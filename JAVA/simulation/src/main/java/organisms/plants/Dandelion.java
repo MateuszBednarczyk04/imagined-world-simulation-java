@@ -1,18 +1,19 @@
 package organisms.plants;
 
-import organisms.Organism;
 import game.World;
+import lombok.NoArgsConstructor;
+import organisms.Organism;
 
-import java.awt.Color;
+import java.awt.*;
 
+@NoArgsConstructor
 public class Dandelion extends Plant {
     public static final String NAME = "Dandelion";
     public static final Color COLOR = Color.YELLOW;
+    private static final int STRENGTH = 0;
 
-    public Dandelion() {}
-
-    public Dandelion(World world, int x, int y) {
-        super(world, x, y, 0);
+    public Dandelion(final World world, final int x, final int y) {
+        super(world, x, y, STRENGTH);
     }
 
     @Override

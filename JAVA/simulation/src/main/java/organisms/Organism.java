@@ -46,7 +46,7 @@ public abstract class Organism implements Serializable {
 
     protected boolean isAlive;
 
-    public Organism(World world, int x, int y, int strength, int initiative) {
+    public Organism(final World world, final int x, final int y, final int strength, final int initiative) {
         this.world = world;
         this.x = x;
         this.y = y;
@@ -58,7 +58,7 @@ public abstract class Organism implements Serializable {
 
     public abstract void action();
 
-    public abstract void collision(Organism attacker);
+    public abstract void collision(final Organism attacker);
 
     @JsonIgnore
     public abstract String getName();
@@ -66,15 +66,11 @@ public abstract class Organism implements Serializable {
     @JsonIgnore
     public abstract Color getColor();
 
-    public void draw() {
-        // This might be handled by the GUI, but we can keep it for console representation if needed
-    }
-
     public void incrementAge() {
         this.age++;
     }
 
-    public void setPosition(int x, int y) {
+    public void setPosition(final int x, final int y) {
         this.x = x;
         this.y = y;
     }

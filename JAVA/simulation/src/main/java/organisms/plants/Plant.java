@@ -9,13 +9,13 @@ import java.util.Random;
 
 public abstract class Plant extends Organism {
     protected Random random;
-    protected double reproducingProbability = 0.05; // 5% chance
+    protected double reproducingProbability = 0.05;
 
     public Plant() {
         this.random = new Random();
     }
 
-    public Plant(World world, int x, int y, int strength) {
+    public Plant(final World world, final int x, final int y, final int strength) {
         super(world, x, y, strength, 0);
         this.random = new Random();
     }
@@ -33,7 +33,7 @@ public abstract class Plant extends Organism {
             final Point p = freeSpots.get(random.nextInt(freeSpots.size()));
             final Organism newPlant = createNewPlant(p.x, p.y);
             world.addOrganism(newPlant);
-            world.getLogger().log("New plan grown: " + newPlant.getName() + " on (" + p.x + "," + p.y + ")");
+            world.getLogger().log("New plant grown: " + newPlant.getName() + " on (" + p.x + "," + p.y + ")");
         }
     }
 

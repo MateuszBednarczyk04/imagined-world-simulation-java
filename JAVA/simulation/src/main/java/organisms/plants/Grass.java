@@ -10,9 +10,10 @@ import java.awt.*;
 public class Grass extends Plant {
     public static final String NAME = "Grass";
     public static final Color COLOR = Color.GREEN;
+    private static final int STRENGTH = 0;
 
     public Grass(World world, int x, int y) {
-        super(world, x, y, 0);
+        super(world, x, y, STRENGTH);
     }
 
     @Override

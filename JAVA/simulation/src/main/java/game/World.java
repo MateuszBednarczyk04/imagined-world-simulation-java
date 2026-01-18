@@ -53,9 +53,9 @@ public abstract class World implements Serializable {
         this.logger = new GameLogger();
     }
 
-    public abstract List<Point> getNeighbors(int x, int y);
+    public abstract List<Point> getNeighbors(final int x, final int y);
 
-    public List<Point> getFreeNeighbors(int x, int y) {
+    public List<Point> getFreeNeighbors(final int x, final int y) {
         final List<Point> neighbors = getNeighbors(x, y);
         final List<Point> freeNeighbors = new ArrayList<>();
         for (Point p : neighbors) {
@@ -176,7 +176,7 @@ public abstract class World implements Serializable {
 
     @JsonIgnore
     public Point getRandomFreePosition() {
-        var rand = new Random();
+        final var rand = new Random();
         int x, y;
         do {
             x = rand.nextInt(width);

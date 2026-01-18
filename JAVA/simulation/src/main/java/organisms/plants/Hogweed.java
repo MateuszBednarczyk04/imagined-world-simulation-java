@@ -13,16 +13,17 @@ import java.util.List;
 public class Hogweed extends Plant {
     public static final String NAME = "Sosnowsky hogweed";
     public static final Color COLOR = new Color(128, 128, 0);
+    private static final int STRENGTH = 10;
 
-    public Hogweed(World world, int x, int y) {
-        super(world, x, y, 10);
+    public Hogweed(final World world, final int x, final int y) {
+        super(world, x, y, STRENGTH);
     }
 
     @Override
     public void action() {
-        List<Point> neighbors = world.getNeighbors(x, y);
-        for (Point p : neighbors) {
-            Organism neighbor = world.getOrganismAt(p.x, p.y);
+        final List<Point> neighbors = world.getNeighbors(x, y);
+        for (final Point p : neighbors) {
+            final Organism neighbor = world.getOrganismAt(p.x, p.y);
             if (neighbor instanceof Animal && !(neighbor instanceof CyberSheep)) {
                 world.getLogger().log(NAME + " kills " + neighbor.getName() + " in neighbourhood.");
                 world.removeOrganism(neighbor);
@@ -32,7 +33,7 @@ public class Hogweed extends Plant {
     }
 
     @Override
-    public void collision(Organism attacker) {
+    public void collision(final Organism attacker) {
         if (attacker instanceof CyberSheep) {
             world.getLogger().log(CyberSheep.NAME + "eats  " + NAME);
             world.removeOrganism(this);

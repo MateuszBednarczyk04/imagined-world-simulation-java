@@ -10,12 +10,12 @@ public class SquareWorld extends World {
         super();
     }
 
-    public SquareWorld(int width, int height) {
+    public SquareWorld(final int width, final int height) {
         super(width, height);
     }
 
     @Override
-    public List<Point> getNeighbors(int x, int y) {
+    public List<Point> getNeighbors(final int x, final int y) {
         final List<Point> neighbors = new ArrayList<>();
 
         for (int[] dir : Constants.SQUARE_DIRECTIONS) {
