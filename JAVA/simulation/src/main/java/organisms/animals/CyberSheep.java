@@ -13,9 +13,11 @@ import java.util.Objects;
 public class CyberSheep extends Animal {
     public static final String NAME = "Cyber-sheep";
     public static final Color COLOR = Color.CYAN;
+    private static final int STRENGTH = 11;
+    private static final int INITIATIVE = 4;
 
     public CyberSheep(final World world, final int x, final int y) {
-        super(world, x, y, 11, 4);
+        super(world, x, y, STRENGTH, INITIATIVE);
     }
 
     @Override

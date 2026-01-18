@@ -11,10 +11,12 @@ import java.awt.*;
 public class Turtle extends Animal {
     public static final String NAME = "Turtle";
     public static final Color COLOR = new Color(0, 100, 0);
+    private static final int STRENGTH = 2;
+    private static final int INITIATIVE = 1;
     private static final Double CHANCE_FOR_DEFEND_ATTACK = 0.75;
 
     public Turtle(final World world, final int x, final int y) {
-        super(world, x, y, 2, 1);
+        super(world, x, y, STRENGTH, INITIATIVE);
     }
 
     @Override

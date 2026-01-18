@@ -13,9 +13,11 @@ import java.util.Objects;
 public class Fox extends Animal {
     public static final String NAME = "Fox";
     public static final Color COLOR = Color.ORANGE;
+    private static final int STRENGTH = 3;
+    private static final int INITIATIVE = 7;
 
     public Fox(final World world, final int x, final int y) {
-        super(world, x, y, 3, 7);
+        super(world, x, y, STRENGTH, INITIATIVE);
     }
 
     @Override

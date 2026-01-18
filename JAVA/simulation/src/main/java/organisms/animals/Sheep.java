@@ -10,9 +10,11 @@ import java.awt.*;
 public class Sheep extends Animal {
     public static final String NAME = "Sheep";
     public static final Color COLOR = Color.LIGHT_GRAY;
+    private static final int STRENGTH = 4;
+    private static final int INITIATIVE = 4;
 
     public Sheep(final World world, final int x, final int y) {
-        super(world, x, y, 4, 4);
+        super(world, x, y, STRENGTH, INITIATIVE);
     }
 
     @Override
